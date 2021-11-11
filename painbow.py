@@ -31,6 +31,7 @@ colors = [
 
 colors = [matplotlib.colors.to_rgb(i) for i in colors]
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list("painbow", colors)
+matplotlib.cm.register_cmap("painbow", cmap)
 
 
 

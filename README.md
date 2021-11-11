@@ -3,17 +3,25 @@
 
 ## Usage
 
-Simply import the colormap
+Importing the package registers the colormap to matplotlib, thus this works:
+
+```python
+import painbow
+
+plt.imshow(image, cmap="painbow")
+```
+
+(The registration (i.e., the import line) can happen in a different/central part of your code, if that's desirable. Also, it is only needed once.)
+
+Alternatively, you can simply import the colormap object and use it directly:
 
 ```python
 from painbow import cmap
-```
 
-... and use it:
-
-```python
 plt.imshow(image, cmap=cmap)
 ```
+
+(The object must be imported wherever it is used.)
 
 ## Example
 

@@ -2,14 +2,14 @@
 
 import numpy as np
 from matplotlib import pyplot as plt
-from painbow import cmap
+import painbow
 
 
 data = np.load("data.npy")
 
 plt.xkcd()
 
-plt.imshow(data, cmap=cmap, origin="lower")
+plt.imshow(data, cmap="painbow", origin="lower")
 
 plt.xlabel("$\\theta$ (PHASE)")
 plt.ylabel("$\\lambda$", rotation=0)
